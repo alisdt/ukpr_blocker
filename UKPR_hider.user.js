@@ -10,7 +10,7 @@
 
 // This list is an example! Change it before you use the script.
 // Names are sensitive to punctuation and spacing, use all lower case.
-var ignore_list = 'alisdair,oldnat,anthony wells';
+var ignore_list = 'person1,person2,firstname surname,person4';
 var ignore = ignore_list.split(',')
 
 var comment_metas = document.getElementsByClassName('commentmetadata');
