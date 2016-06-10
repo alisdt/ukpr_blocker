@@ -6,9 +6,7 @@ For use with Mozilla Firefox. Directions for use:
 
 2. When prompted to, say "Yes" to restart Firefox.
 
-3. Click on this link to install the script:
-
-https://raw.githubusercontent.com/alisdt/ukpr_blocker/master/UKPR_hider.user.js
+3. Click on this link to install the script: https://raw.githubusercontent.com/alisdt/ukpr_blocker/master/UKPR_hider.user.js
 
 4. Now edit the block list in the script. Click on the arrow next to the Greasemonkey icon on your toolbar and choose "Manage User Scripts". Click on "Preferences" and "Edit this User Script".
 
