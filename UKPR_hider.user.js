@@ -20,8 +20,6 @@ for (var i = 0; i < comment_metas.length; i++) {
   var comment_text = comments[0].textContent.toLowerCase();
   for (var j = 0; j < ignores.length; j++) {
     var ignore = ignores[j];
-    console.log('comparing username: '+username+' and: '+ignore);
-    console.log('searching for username: '+username+' in text: """'+comment_text+'"""')
 	if (ignore == username || comment_text.indexOf(ignore) > -1) {
       // hide comment!
       comment_meta.parentNode.style.display = 'none';
