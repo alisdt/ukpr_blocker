@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 
-var ignore_list = 'allan christie,thoughtful,jonathan stuart-brown,candy,tancred';
+var ignore_list = 'user1,user2,user3,user4';
 var ignores = ignore_list.split(',')
 
 var comment_metas = document.getElementsByClassName('commentmetadata');
