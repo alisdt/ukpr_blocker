@@ -8,18 +8,23 @@
 // ==/UserScript==
 
 
-// This list is an example! Change it before you use the script.
-// Names are sensitive to punctuation and spacing, use all lower case.
-var ignore_list = 'person1,person2,firstname surname,person4';
-var ignore = ignore_list.split(',')
+var ignore_list = 'allan christie,thoughtful,jonathan stuart-brown,candy,tancred';
+var ignores = ignore_list.split(',')
 
 var comment_metas = document.getElementsByClassName('commentmetadata');
 for (var i = 0; i < comment_metas.length; i++) {
   var comment_meta = comment_metas[i];
   var username_tags = comment_meta.getElementsByTagName('strong');
-  var username = username_tags[0].firstChild.textContent;
-  if (ignore.indexOf(username.toLowerCase()) > -1) {
-    // hide comment!
-    comment_meta.parentNode.style.display = 'none';
+  var username = username_tags[0].firstChild.textContent.toLowerCase();
+  var comments = comment_meta.parentNode.getElementsByClassName('commenttext');
+  var comment_text = comments[0].textContent.toLowerCase();
+  for (var j = 0; j < ignores.length; j++) {
+    var ignore = ignores[j];
+    console.log('comparing username: '+username+' and: '+ignore);
+    console.log('searching for username: '+username+' in text: """'+comment_text+'"""')
+	if (ignore == username || comment_text.indexOf(ignore) > -1) {
+      // hide comment!
+      comment_meta.parentNode.style.display = 'none';
+    }
   }
 }
